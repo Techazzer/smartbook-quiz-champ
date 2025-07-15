@@ -13,7 +13,7 @@ const FAQSection = () => {
     },
     {
       question: "What do winners get?",
-      answer: "Top 20 rankers get any 1 SmartBook free (Reasoning, Quantitative Aptitude, or English). All other participants get 50% off on all SmartBooks."
+      answer: "Top 20 rankers get any 1 SmartBook free (Reasoning, Quantitative Aptitude, or English)."
     },
     {
       question: "Can I participate more than once?",
@@ -25,7 +25,7 @@ const FAQSection = () => {
     },
     {
       question: "What if I don't win?",
-      answer: "Don't worry! You'll get an instant 50% discount on all SmartBooks, so you can still get premium preparation material at a great price."
+      answer: "Don't worry! You can still get premium preparation material at a great price."
     }
   ];
 

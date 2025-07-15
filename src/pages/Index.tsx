@@ -147,29 +147,16 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="max-w-md mx-auto">
             <Card className="p-8 border-2 border-yellow-200 bg-gradient-to-br from-yellow-50 to-yellow-100">
               <div className="text-center">
                 <Trophy className="h-16 w-16 text-yellow-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Top 20 Rankers</h3>
                 <p className="text-lg text-gray-700 mb-4">
-                  Get 1 SmartBook <span className="font-bold text-yellow-600">FREE</span>
+                  Get SmartBook <span className="font-bold text-yellow-600">FREE</span>
                 </p>
                 <Badge className="bg-yellow-500 text-white">
                   Reasoning / Quant / English – Your Choice
-                </Badge>
-              </div>
-            </Card>
-
-            <Card className="p-8 border-2 border-blue-200 bg-gradient-to-br from-blue-50 to-blue-100">
-              <div className="text-center">
-                <Users className="h-16 w-16 text-[#1967d2] mx-auto mb-4" />
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">All Participants</h3>
-                <p className="text-lg text-gray-700 mb-4">
-                  Flat <span className="font-bold text-[#1967d2]">50% OFF</span> on remaining SmartBooks
-                </p>
-                <Badge className="bg-[#1967d2] text-white">
-                  Instant Discount Applied
                 </Badge>
               </div>
             </Card>
@@ -240,16 +227,6 @@ const Index = () => {
                   <p className="text-gray-600">Trusted by successful banking aspirants</p>
                 </div>
               </div>
-            </div>
-
-            <div className="text-center mt-12">
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-[#1967d2] text-[#1967d2] hover:bg-[#1967d2] hover:text-white font-bold text-lg px-8 py-3 rounded-full"
-              >
-                👉 See All SmartBooks
-              </Button>
             </div>
           </div>
         </div>

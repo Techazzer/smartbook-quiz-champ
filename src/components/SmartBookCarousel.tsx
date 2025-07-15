@@ -8,21 +8,21 @@ const SmartBookCarousel = () => {
     {
       title: "Quantitative Aptitude",
       description: "Master numerical ability and data interpretation",
-      features: ["4000+ Questions", "Topic-wise Practice", "Speed Enhancement"],
+      features: ["4000+ Questions", "Topic-wise Practice", "Latest PYQs 2024", "Detailed Solutions"],
       rating: 4.8,
       color: "from-blue-500 to-indigo-600"
     },
     {
       title: "Reasoning Ability", 
       description: "Logical and analytical reasoning mastery",
-      features: ["3500+ Questions", "Pattern Recognition", "Quick Solutions"],
+      features: ["4000+ Questions", "Topic-wise Practice", "Latest PYQs 2024", "Quick Solutions"],
       rating: 4.9,
       color: "from-green-500 to-emerald-600"
     },
     {
       title: "English Language",
       description: "Grammar, vocabulary and comprehension excellence", 
-      features: ["4500+ Questions", "Grammar Rules", "Vocab Building"],
+      features: ["4000+ Questions", "Topic-wise Practice", "Grammar Rules", "Vocab Building", "Latest PYQs 2024"],
       rating: 4.7,
       color: "from-purple-500 to-violet-600"
     }
