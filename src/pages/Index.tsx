@@ -121,7 +121,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">🎁 Win a SmartBook FREE</h3>
               <p className="text-gray-600 leading-relaxed">
-                Top 20 get free SmartBook. All others get 50% OFF instantly.
+                Top 20 get free SmartBook.
               </p>
             </Card>
           </div>
