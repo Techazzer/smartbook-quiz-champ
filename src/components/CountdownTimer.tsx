@@ -11,8 +11,8 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    // Set target date to July 22, 2024, 11:59 PM
-    const targetDate = new Date('2024-07-22T23:59:59').getTime();
+    // Set target date to July 22, 2025, 11:59 PM
+    const targetDate = new Date('2025-07-22T23:59:59').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();

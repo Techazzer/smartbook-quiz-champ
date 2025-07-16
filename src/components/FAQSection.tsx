@@ -9,7 +9,7 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "What is the contest about?",
-      answer: "Solve 20 banking-level questions and compete to rank in the top 20. Winners get a free SmartBook of their choice!"
+      answer: "Solve 30 banking-level questions and compete to rank in the top 20. Winners get a free SmartBook of their choice!"
     },
     {
       question: "What do winners get?",

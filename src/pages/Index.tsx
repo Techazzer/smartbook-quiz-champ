@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -58,7 +57,7 @@ const Index = () => {
             </h1>
             
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto leading-relaxed">
-              Attempt 20 Questions. Rank in the Top 20.<br/>
+              Attempt 30 Questions. Rank in the Top 20.<br/>
               <span className="font-semibold text-yellow-300">Win a SmartBook – Absolutely FREE!</span>
             </p>
 
@@ -101,7 +100,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">🎯 Attempt the Challenge</h3>
               <p className="text-gray-600 leading-relaxed">
-                Solve 20 banking-level MCQs in one go. Test your knowledge across all subjects.
+                Solve 30 banking-level MCQs in one go. Test your knowledge across all subjects.
               </p>
             </Card>
 
@@ -238,28 +237,103 @@ const Index = () => {
       {/* Terms & Conditions */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Terms & Conditions</h3>
-            <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-600">
-              <div className="flex items-start space-x-2">
-                <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
-                <p>One entry per user allowed</p>
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Terms & Conditions</h3>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Eligibility */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Eligibility:</h4>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>The contest is open to all residents of India preparing for Banking exams.</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Only one entry per participant is allowed.</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
-                <p>No fake entries or cheating permitted</p>
+
+              {/* Participation Rules */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Participation Rules:</h4>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Contestants must complete the quiz in a single attempt.</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>The quiz consists of 30 questions and is time-bound.</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Any attempt to cheat, copy answers, or use unfair means will lead to disqualification.</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
-                <p>Winners must claim prize within 48 hours</p>
+
+              {/* Winners */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Winners:</h4>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Top 20 participants will be selected based on speed and accuracy.</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>In case of a tie, the participant with the faster submission will be ranked higher.</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Winners will be announced on 23rd July 2025.</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
-                <p>SmartBook delivery subject to availability</p>
+
+              {/* Prizes */}
+              <div>
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">Prizes:</h4>
+                <div className="space-y-3 text-sm text-gray-600">
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Each winner will receive 1 Testbook SmartBook (choice of Reasoning, Quant, or English).</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Winners must submit their shipping details within 48 hours of result announcement.</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>Prizes will be shipped within 7–10 working days from confirmation.</p>
+                  </div>
+                  <div className="flex items-start space-x-2">
+                    <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                    <p>No cash alternative is available.</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-start space-x-2 md:col-span-2">
-                <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
-                <p>Testbook reserves all final decision rights</p>
+            </div>
+
+            {/* Other Conditions */}
+            <div className="mt-8">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4">Other Conditions:</h4>
+              <div className="space-y-3 text-sm text-gray-600">
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                  <p>Testbook reserves the right to modify or cancel the contest at any time.</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                  <p>By participating, users agree to be contacted via email/phone for contest updates and related communications.</p>
+                </div>
+                <div className="flex items-start space-x-2">
+                  <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
+                  <p>Testbook's decision on all matters related to the contest is final and binding.</p>
+                </div>
               </div>
             </div>
           </div>
