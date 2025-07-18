@@ -11,8 +11,8 @@ const CountdownTimer = () => {
   });
 
   useEffect(() => {
-    // Set target date to July 22, 2025, 11:59 PM
-    const targetDate = new Date('2025-07-22T23:59:59').getTime();
+  // Set target date to July 22, 2025, 9:00 AM (registration closes)
+  const targetDate = new Date('2025-07-22T09:00:00').getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -37,7 +37,7 @@ const CountdownTimer = () => {
     <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto">
       <div className="flex items-center justify-center mb-4">
         <Clock className="h-6 w-6 mr-2 text-yellow-300" />
-        <span className="text-lg font-semibold text-yellow-300">Contest Ends In:</span>
+        <span className="text-lg font-semibold text-yellow-300">Registration Closes In:</span>
       </div>
       
       <div className="grid grid-cols-4 gap-4 text-center">

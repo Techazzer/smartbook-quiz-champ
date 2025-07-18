@@ -23,9 +23,13 @@ import {
 import CountdownTimer from '@/components/CountdownTimer';
 import FAQSection from '@/components/FAQSection';
 import SmartBookCarousel from '@/components/SmartBookCarousel';
+import RegistrationForm from '@/components/RegistrationForm';
+import SuccessPage from '@/components/SuccessPage';
 
 const Index = () => {
   const [stickyVisible, setStickyVisible] = useState(true);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
+  const [showSuccessPage, setShowSuccessPage] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,10 +39,13 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleStartQuiz = () => {
-    // This would typically redirect to quiz page or open quiz modal
-    console.log('Starting quiz...');
-    alert('Quiz functionality would be implemented here!');
+  const handleRegisterNow = () => {
+    setShowRegistrationForm(true);
+  };
+
+  const handleRegistrationSuccess = () => {
+    setShowRegistrationForm(false);
+    setShowSuccessPage(true);
   };
 
   return (
@@ -65,16 +72,16 @@ const Index = () => {
 
             <div className="mt-12">
               <Button 
-                onClick={handleStartQuiz}
+                onClick={handleRegisterNow}
                 size="lg" 
                 className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
               >
-                👉 Start Quiz Now
+                👉 Register Now
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               
               <p className="mt-4 text-sm text-blue-200">
-                📢 Result on: 23rd July | ⏰ Contest Ends: 22nd July, 11:59 PM
+                📢 Result on: 23rd July | ⏰ Test: 22nd July, 11 AM - 12 PM | Registration closes: 9 AM
               </p>
             </div>
           </div>
@@ -127,11 +134,11 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <Button 
-              onClick={handleStartQuiz}
+              onClick={handleRegisterNow}
               size="lg" 
               className="bg-[#1967d2] hover:bg-blue-700 text-white font-bold text-lg px-8 py-3 rounded-full"
             >
-              👉 Start Quiz Now
+              👉 Register Now
             </Button>
           </div>
         </div>
@@ -346,19 +353,32 @@ const Index = () => {
           <div className="container mx-auto flex items-center justify-between">
             <div className="flex items-center space-x-2 text-sm md:text-base">
               <Zap className="h-5 w-5 text-yellow-300" />
-              <span className="font-semibold">Smartest Aspirant Quiz LIVE</span>
-              <span className="hidden sm:inline">| Ends 22 July</span>
+              <span className="font-semibold">Smartest Aspirant Quiz Registration</span>
+              <span className="hidden sm:inline">| Test: 22 July 11 AM</span>
             </div>
             <Button 
-              onClick={handleStartQuiz}
+              onClick={handleRegisterNow}
               size="sm" 
               className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold rounded-full"
             >
-              Start Now
+              Register Now
             </Button>
           </div>
         </div>
       )}
+
+      {/* Registration Form Modal */}
+      <RegistrationForm
+        isOpen={showRegistrationForm}
+        onClose={() => setShowRegistrationForm(false)}
+        onSuccess={handleRegistrationSuccess}
+      />
+
+      {/* Success Page Modal */}
+      <SuccessPage
+        isOpen={showSuccessPage}
+        onClose={() => setShowSuccessPage(false)}
+      />
     </div>
   );
 };

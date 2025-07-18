@@ -8,8 +8,8 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "What is the contest about?",
-      answer: "Solve 30 banking-level questions and compete to rank in the top 20. Winners get a free SmartBook of their choice!"
+      question: "How many questions are there in the quiz?",
+      answer: "The quiz contains 30 carefully curated questions covering all important banking topics. You'll have 1 hour to complete all questions, so manage your time wisely!"
     },
     {
       question: "What do winners get?",
