@@ -9,7 +9,7 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "How many questions are there in the quiz?",
-      answer: "The quiz contains 30 carefully curated questions covering all important banking topics. You'll have 1 hour to complete all questions, so manage your time wisely!"
+      answer: "The quiz contains 30 carefully curated questions covering all important banking topics. You'll have a 6-hour window to complete all questions, so manage your time wisely!"
     },
     {
       question: "What do winners get?",
@@ -21,7 +21,7 @@ const FAQSection = () => {
     },
     {
       question: "When will the results be announced?",
-      answer: "📅 Results will be announced on 23rd July via email and Telegram. Winners will be contacted directly."
+      answer: "📅 Results will be announced on 24th July via email and Telegram. Winners will be contacted directly."
     },
     {
       question: "What if I don't win?",

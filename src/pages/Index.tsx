@@ -81,7 +81,7 @@ const Index = () => {
               </Button>
               
               <p className="mt-4 text-sm text-blue-200">
-                📢 Result on: 23rd July | ⏰ Test: 22nd July, 11 AM - 12 PM | Registration closes: 9 AM
+                📢 Result on: 24th July | ⏰ Test: 23rd July, 11 AM - 5 PM | Registration closes: 9 AM
               </p>
             </div>
           </div>
@@ -107,7 +107,7 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold mb-4 text-gray-900">🎯 Attempt the Challenge</h3>
               <p className="text-gray-600 leading-relaxed">
-                Solve 30 banking-level MCQs in one go. Test your knowledge across all subjects.
+                Solve 30 banking-level MCQs within the 6-hour window. Test your knowledge across all subjects.
               </p>
             </Card>
 
@@ -296,7 +296,7 @@ const Index = () => {
                   </div>
                   <div className="flex items-start space-x-2">
                     <div className="w-2 h-2 bg-[#1967d2] rounded-full mt-2 flex-shrink-0"></div>
-                    <p>Winners will be announced on 23rd July 2025.</p>
+                    <p>Winners will be announced on 24th July 2025.</p>
                   </div>
                 </div>
               </div>
@@ -354,7 +354,7 @@ const Index = () => {
             <div className="flex items-center space-x-2 text-sm md:text-base">
               <Zap className="h-5 w-5 text-yellow-300" />
               <span className="font-semibold">Smartest Aspirant Quiz Registration</span>
-              <span className="hidden sm:inline">| Test: 22 July 11 AM</span>
+              <span className="hidden sm:inline">| Test: 23 July 11 AM-5 PM</span>
             </div>
             <Button 
               onClick={handleRegisterNow}

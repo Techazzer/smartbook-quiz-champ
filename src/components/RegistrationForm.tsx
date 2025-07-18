@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { CheckCircle, X } from 'lucide-react';
 
 interface RegistrationFormProps {
@@ -17,10 +18,51 @@ const RegistrationForm = ({ isOpen, onClose, onSuccess }: RegistrationFormProps)
     email: '',
     whatsapp: ''
   });
+  const [consent, setConsent] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState({
+    email: '',
+    whatsapp: '',
+    consent: ''
+  });
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validateIndianPhone = (phone: string) => {
+    const phoneRegex = /^[6-9]\d{9}$/;
+    return phoneRegex.test(phone.replace(/\s+/g, ''));
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const newErrors = {
+      email: '',
+      whatsapp: '',
+      consent: ''
+    };
+
+    if (!validateEmail(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!validateIndianPhone(formData.whatsapp)) {
+      newErrors.whatsapp = 'Please enter a valid 10-digit Indian mobile number';
+    }
+
+    if (!consent) {
+      newErrors.consent = 'Please consent to receive communications';
+    }
+
+    setErrors(newErrors);
+
+    if (newErrors.email || newErrors.whatsapp || newErrors.consent) {
+      return;
+    }
+
     setIsSubmitting(true);
     
     // Simulate API call
@@ -50,7 +92,7 @@ const RegistrationForm = ({ isOpen, onClose, onSuccess }: RegistrationFormProps)
             Register for Contest
           </CardTitle>
           <p className="text-center text-gray-600 mt-2">
-            Test starts on 22nd July at 11 AM for 1 hour
+            Test on 23rd July from 11 AM to 5 PM (6 hours window)
           </p>
         </CardHeader>
         <CardContent>
@@ -77,27 +119,45 @@ const RegistrationForm = ({ isOpen, onClose, onSuccess }: RegistrationFormProps)
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 placeholder="Enter your email"
                 required
-                className="mt-1"
+                className={`mt-1 ${errors.email ? 'border-red-500' : ''}`}
               />
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
             
             <div>
-              <Label htmlFor="whatsapp">WhatsApp Number *</Label>
+              <Label htmlFor="whatsapp">Mobile Number *</Label>
               <Input
                 id="whatsapp"
                 type="tel"
                 value={formData.whatsapp}
                 onChange={(e) => handleInputChange('whatsapp', e.target.value)}
-                placeholder="Enter your WhatsApp number"
+                placeholder="Enter your 10-digit mobile number"
                 required
-                className="mt-1"
+                className={`mt-1 ${errors.whatsapp ? 'border-red-500' : ''}`}
+                maxLength={10}
               />
+              {errors.whatsapp && <p className="text-red-500 text-sm mt-1">{errors.whatsapp}</p>}
             </div>
             
+            <div className="flex items-start space-x-2">
+              <Checkbox
+                id="consent"
+                checked={consent}
+                onCheckedChange={(checked) => setConsent(checked as boolean)}
+                className={`mt-1 ${errors.consent ? 'border-red-500' : ''}`}
+              />
+              <div className="flex-1">
+                <Label htmlFor="consent" className="text-sm">
+                  I consent to receive communications regarding the contest, test updates, and promotional content on my provided email and mobile number. *
+                </Label>
+                {errors.consent && <p className="text-red-500 text-sm mt-1">{errors.consent}</p>}
+              </div>
+            </div>
+
             <div className="bg-blue-50 p-4 rounded-lg">
               <p className="text-sm text-blue-800">
                 <strong>Important:</strong> Test link will be shared on your registered email address. 
-                Contest reminders will be sent on WhatsApp.
+                Contest reminders will be sent on email.
               </p>
             </div>
             
