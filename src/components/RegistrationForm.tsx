@@ -114,7 +114,7 @@ const RegistrationForm = ({ isOpen, onClose, onSuccess }: RegistrationFormProps)
               <Label htmlFor="email">Email Address *</Label>
               <Input
                 id="email"
-                type="email"
+                type="text"
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 placeholder="Enter your email"

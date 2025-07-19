@@ -36,11 +36,11 @@ const SuccessPage = ({ isOpen, onClose }: SuccessPageProps) => {
             </div>
             
             <div className="flex items-start space-x-3 p-4 bg-green-50 rounded-lg">
-              <MessageCircle className="h-5 w-5 text-green-600 mt-1" />
+              <Mail className="h-5 w-5 text-green-600 mt-1" />
               <div className="text-left">
-                <h4 className="font-semibold text-gray-900">WhatsApp Reminders</h4>
+                <h4 className="font-semibold text-gray-900">Email Reminders</h4>
                 <p className="text-sm text-gray-600">
-                  We'll send you contest reminders and updates on WhatsApp.
+                  We'll send you contest reminders and updates on email.
                 </p>
               </div>
             </div>
@@ -50,9 +50,9 @@ const SuccessPage = ({ isOpen, onClose }: SuccessPageProps) => {
               <div className="text-left">
                 <h4 className="font-semibold text-gray-900">Contest Schedule</h4>
                 <p className="text-sm text-gray-600">
-                  <strong>Date:</strong> 22nd July, 2025<br/>
-                  <strong>Time:</strong> 11:00 AM - 12:00 PM (1 hour)<br/>
-                  <strong>Registration closes:</strong> 22nd July, 9:00 AM
+                  <strong>Date:</strong> 23rd July, 2025<br/>
+                  <strong>Time:</strong> 11:00 AM - 5:00 PM (6 hours)<br/>
+                  <strong>Registration closes:</strong> 23rd July, 9:00 AM
                 </p>
               </div>
             </div>

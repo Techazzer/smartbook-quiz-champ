@@ -81,7 +81,7 @@ const Index = () => {
               </Button>
               
               <p className="mt-4 text-sm text-blue-200">
-                📢 Result on: 24th July | ⏰ Test: 23rd July, 11 AM - 5 PM | Registration closes: 9 AM
+                📅 Registration closes: 23rd July, 9 AM | ⏰ Test: 23rd July, 11 AM - 5 PM | 📢 Result on: 24th July
               </p>
             </div>
           </div>
@@ -242,7 +242,7 @@ const Index = () => {
       <FAQSection />
 
       {/* Terms & Conditions */}
-      <section className="py-12 bg-gray-50">
+      <section className="py-12 bg-gray-50 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Terms & Conditions</h3>
@@ -354,7 +354,7 @@ const Index = () => {
             <div className="flex items-center space-x-2 text-sm md:text-base">
               <Zap className="h-5 w-5 text-yellow-300" />
               <span className="font-semibold">Smartest Aspirant Quiz Registration</span>
-              <span className="hidden sm:inline">| Test: 23 July 11 AM-5 PM</span>
+              <span className="hidden sm:inline">| Registration closes: 23rd July, 9 AM</span>
             </div>
             <Button 
               onClick={handleRegisterNow}

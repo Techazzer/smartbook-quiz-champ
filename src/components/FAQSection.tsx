@@ -21,7 +21,7 @@ const FAQSection = () => {
     },
     {
       question: "When will the results be announced?",
-      answer: "📅 Results will be announced on 24th July via email and Telegram. Winners will be contacted directly."
+      answer: "📅 Results will be announced on 24th July via email. Winners will be contacted directly."
     },
     {
       question: "What if I don't win?",
