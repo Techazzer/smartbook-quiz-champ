@@ -18,10 +18,8 @@ import {
   Zap,
   ArrowRight,
   ChevronDown,
-  ChevronUp,
-  Image
+  ChevronUp
 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import CountdownTimer from '@/components/CountdownTimer';
 import FAQSection from '@/components/FAQSection';
 import SmartBookCarousel from '@/components/SmartBookCarousel';
@@ -29,7 +27,6 @@ import RegistrationForm from '@/components/RegistrationForm';
 import SuccessPage from '@/components/SuccessPage';
 
 const Index = () => {
-  const navigate = useNavigate();
   const [stickyVisible, setStickyVisible] = useState(true);
   const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [showSuccessPage, setShowSuccessPage] = useState(false);
@@ -74,26 +71,14 @@ const Index = () => {
             <CountdownTimer />
 
             <div className="mt-12">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button 
-                  onClick={handleRegisterNow}
-                  size="lg" 
-                  className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
-                >
-                  👉 Register Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-                
-                <Button 
-                  onClick={() => navigate('/promotions')}
-                  variant="outline"
-                  size="lg" 
-                  className="border-white/30 text-white hover:bg-white/10 font-semibold text-lg px-6 py-4 rounded-full"
-                >
-                  <Image className="mr-2 h-5 w-5" />
-                  Promotional Images
-                </Button>
-              </div>
+              <Button 
+                onClick={handleRegisterNow}
+                size="lg" 
+                className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
+              >
+                👉 Register Now
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
               
               <p className="mt-4 text-sm text-blue-200">
                 📅 Registration closes: 23rd July, 9 AM | ⏰ Test: 23rd July, 11 AM - 5 PM | 📢 Result on: 24th July
